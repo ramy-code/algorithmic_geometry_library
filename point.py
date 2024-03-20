@@ -1,5 +1,6 @@
 import random
 import math
+import turtle
 class Point:
 
     def __init__(self,x,y):
@@ -34,3 +35,11 @@ class Point:
         else:
             raise TypeError("Can only compute distance between two Points.")
     
+    def draw(self):
+        colors = ['red', 'blue', 'green', 'orange', 'purple'] 
+        color = random.choice(colors)  
+        turtle.color(color)
+        turtle.penup()
+        turtle.goto(self.x, self.y)
+        turtle.pendown()
+        turtle.dot(5)
